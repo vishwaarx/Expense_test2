@@ -9,7 +9,7 @@ import os
 app = FastAPI(title="Expense Tracker API", version="1.0.0")
 
 # Add CORS middleware
-app.add_middleware(
+#app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # In production, specify your frontend URL
     allow_credentials=True,
@@ -18,13 +18,13 @@ app.add_middleware(
 )
 
 # Pydantic models for request/response validation
-class ExpenseCreate(BaseModel):
+#class ExpenseCreate(BaseModel):
     description: str = Field(..., min_length=1, description="Expense description")
     amount: float = Field(..., gt=0, description="Expense amount (must be positive)")
     category: str = Field(default="General", description="Expense category")
     date: str = Field(default_factory=lambda: datetime.now().strftime('%Y-%m-%d'), description="Expense date")
 
-class ExpenseResponse(BaseModel):
+#class ExpenseResponse(BaseModel):
     id: int
     description: str
     amount: float
