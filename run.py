@@ -99,7 +99,7 @@ def start_server():
         print(f"❌ Error starting server: {e}")
         return False
 
-def main():
+#def main():
     """Main function"""
     print("💰 Expense Tracker (FastAPI)")
     print("=" * 50)
