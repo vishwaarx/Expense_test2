@@ -31,7 +31,7 @@ expense-tracker/
 
 3. **Start the FastAPI backend**
    ```bash
-   python run.py
+   
    ```
    The server will start at `http://localhost:8080`
    API documentation will be available at `http://localhost:8080/docs`
